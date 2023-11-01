@@ -22,7 +22,6 @@ userController.saveUser=async(userName, sid)=>{
 
 userController.checkUser = async(sid)=>{
   const user = await User.findOne({token:sid})
-  console.log("userController", user)
   if(!user) throw new Error("user not found")
   return user;
 }
